@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #05070d;
+  color: #f5f6fa;
+  font-family: "Pretendard", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+/* ---------------------------------------------------------------------------
+   NOTE on line-height:
+   Tailwind's text-* utilities ship their own line-height. We redefine the
+   defaults in tailwind.config.ts (theme.fontSize) so every text-* size has a
+   Korean-friendly leading. When a per-element override is needed, use arbitrary
+   leading AFTER the size, e.g. `text-4xl leading-[1.35]`.
+   Do NOT combine CSS variables with opacity modifiers in arbitrary values
+   (e.g. `text-[var(--pink)]/25` does not work) — use hex or inline style.
+   --------------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(79, 139, 255, 0.35);
+}
+
+/* reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: opacity, transform;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* subtle grain */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+}
