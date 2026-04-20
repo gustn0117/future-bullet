@@ -12,7 +12,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[11px] tracking-[0.3em] text-white/70 backdrop-blur-sm animate-fade-up">
-          FUTURE · BEAUTY · BRAND
+          NO.1 D2C COMPANY
         </div>
         <h1
           className="text-4xl md:text-7xl font-bold leading-[1.1] tracking-tight animate-fade-up"
