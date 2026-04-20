@@ -72,7 +72,7 @@ export default function Brands() {
               <div className="flex flex-1 items-center justify-center p-10 transition-transform duration-700 group-hover:scale-105">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={b.logo}
+                  src={`${b.logo}?v=2`}
                   alt={b.name}
                   className="max-h-24 w-auto max-w-[70%] object-contain brightness-0 invert md:max-h-28"
                 />
