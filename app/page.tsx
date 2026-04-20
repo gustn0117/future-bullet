@@ -4,6 +4,7 @@ import Opportunities from "@/components/Opportunities";
 import GrowthChart from "@/components/GrowthChart";
 import Brands from "@/components/Brands";
 import Vision from "@/components/Vision";
+import Careers from "@/components/Careers";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <GrowthChart />
       <Brands />
       <Vision />
+      <Careers />
       <Footer />
     </main>
   );
