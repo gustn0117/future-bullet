@@ -47,9 +47,8 @@ export default function Brands() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs tracking-[0.35em] text-[#a77dff] mb-4">OUR BRANDS</p>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              소비자의 감각을 이해하고,
+              소비자의 감각을 이해하고, 트렌드를 선도하며
               <br />
-              트렌드를 선도하며,{" "}
               <span className="bg-gradient-to-r from-[#7aa4ff] to-[#e27dff] bg-clip-text text-transparent">
                 브랜드에 새로운 의미
               </span>
