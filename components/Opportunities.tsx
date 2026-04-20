@@ -15,12 +15,10 @@ export default function Opportunities() {
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
           <Reveal>
             <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
-              Creating New Opportunities
-              <br />
-              and Growth
+              Innovation Leading the Future
             </h2>
             <p className="mt-5 text-sm md:text-base text-white/60 tracking-wide">
-              퓨처블릿은 새로운 기회와 성장을 만들어갑니다.
+              퓨처블릿은 열정과 집중력을 다해 모두가 열광하는 최고의 브랜드를 만듭니다.
             </p>
           </Reveal>
         </div>
