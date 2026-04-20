@@ -6,9 +6,9 @@ export default function Footer() {
           <div>
             <div className="text-3xl md:text-4xl font-bold tracking-[0.2em]">FUTURE BULLET</div>
             <p className="mt-4 max-w-md text-sm text-white/50 leading-relaxed">
-              숫자로 증명하고, 감각으로 압도합니다.
+              고객 생활에 가치를 더하는
               <br />
-              제품 기획부터 퍼포먼스 마케팅까지.
+              GLOBAL D2C COMPANY
             </p>
           </div>
           <div className="grid grid-cols-2 gap-10 text-sm">
