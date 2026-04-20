@@ -4,36 +4,36 @@ const brands = [
   {
     name: "ESTHE'LIVE",
     korean: "에스테리브",
-    tagline: "Professional Anti-Aging Ampoule",
-    description: "프로페셔널 안티에이징 앰플로 피부 본연의 감각을 깨웁니다.",
-    image: "/brands/esthelive.png",
+    tagline: "Professional Home Aesthetic Brand",
+    description: "홈에스테틱 스킨케어 브랜드 에스테리브",
+    logo: "/brands/esthelive-logo.png",
     href: "#",
     accent: "from-[#3a2a5c] to-[#111018]",
   },
   {
     name: "ON THE CELL",
     korean: "온더셀",
-    tagline: "Deep Cleansing Scalp Care",
-    description: "딥클렌징과 영양 공급을 동시에, 두피의 균형을 되찾습니다.",
-    image: "/brands/onthecell.png",
+    tagline: "Advanced Science for Scalp Balance",
+    description: "과학으로 검증된 온더셀 헤어케어 솔루션",
+    logo: "/brands/onthecell-logo.png",
     href: "#",
     accent: "from-[#1f2a3d] to-[#0b0f18]",
   },
   {
     name: "8H LAB",
     korean: "에잇아워랩",
-    tagline: "NoseMode · Precision Breathing",
-    description: "깊은 수면과 상쾌한 아침을 위한 정밀 호흡 솔루션.",
-    image: "/brands/8hlab.png",
+    tagline: "Designing Your 8 Hours of Sleep",
+    description: "당신의 잠든 8시간을 설계합니다",
+    logo: "/brands/8hlab-logo.png",
     href: "#",
     accent: "from-[#1b2a4a] to-[#0a101c]",
   },
   {
     name: "SLENIX",
     korean: "슬레닉스",
-    tagline: "Body Boost Shot",
-    description: "타겟 활성과 고성능 포뮬러로 바디 컨디션을 재정의합니다.",
-    image: "/brands/slenix.png",
+    tagline: "Setting a New Standard for Your Body",
+    description: "과학이 만든 똑똑한 바디 루틴",
+    logo: "/brands/slenix-logo.png",
     href: "#",
     accent: "from-[#123a3b] to-[#0a1418]",
   },
@@ -56,46 +56,41 @@ export default function Brands() {
             </h2>
           </div>
         </Reveal>
+      </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+      <div className="relative mt-16 md:mt-20">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#05070d] to-transparent md:w-24" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#05070d] to-transparent md:w-24" />
+
+        <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-6 pb-6 md:gap-6 md:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {brands.map((b, i) => (
-            <Reveal key={b.name} delay={i * 80}>
-              <a
-                href={b.href}
-                className={`group relative flex aspect-[4/5] md:aspect-[5/4] overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-br ${b.accent}`}
-              >
-                <div className="absolute inset-0 flex items-center justify-center p-12 transition-transform duration-700 group-hover:scale-105">
-                  {/* Use plain img to avoid next/image optimization config */}
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={b.image}
-                    alt={b.name}
-                    className="max-h-full max-w-full object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
-                  />
-                </div>
+            <a
+              key={b.name}
+              href={b.href}
+              className={`group relative flex aspect-[3/4] w-[72vw] shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-br ${b.accent} sm:w-[48vw] md:w-[32vw] lg:w-[24vw]`}
+            >
+              <div className="flex flex-1 items-center justify-center p-10 transition-transform duration-700 group-hover:scale-105">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={b.logo}
+                  alt={b.name}
+                  className="max-h-24 w-auto max-w-[70%] object-contain brightness-0 invert md:max-h-28"
+                />
+              </div>
 
-                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
 
-                <div className="relative z-10 mt-auto w-full p-8 md:p-10">
-                  <div className="text-[11px] tracking-[0.3em] text-white/60">{b.korean}</div>
-                  <h3 className="mt-2 text-2xl md:text-3xl font-bold tracking-wide">{b.name}</h3>
-                  <p className="mt-1 text-sm text-[#a77dff]">{b.tagline}</p>
-                  <p className="mt-4 max-w-md text-sm text-white/70">{b.description}</p>
+              <div className="relative z-10 mt-auto w-full p-6 md:p-7">
+                <div className="text-[10px] tracking-[0.3em] text-white/60">{b.korean}</div>
+                <h3 className="mt-1.5 text-lg font-bold tracking-wide md:text-xl">{b.name}</h3>
+                <p className="mt-1 text-xs text-[#a77dff] md:text-sm">{b.tagline}</p>
+                <p className="mt-3 text-xs text-white/70 md:text-sm">{b.description}</p>
+              </div>
 
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white/90 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-1">
-                    홈페이지 보기
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                </div>
-
-                {/* corner index */}
-                <div className="absolute top-6 right-6 text-xs tracking-[0.3em] text-white/30">
-                  0{i + 1} / 0{brands.length}
-                </div>
-              </a>
-            </Reveal>
+              <div className="absolute top-5 right-5 text-[10px] tracking-[0.3em] text-white/30">
+                0{i + 1} / 0{brands.length}
+              </div>
+            </a>
           ))}
         </div>
       </div>
