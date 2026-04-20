@@ -14,7 +14,9 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-10 text-sm">
             <div>
               <div className="text-white/40 text-xs tracking-[0.3em] mb-3">CONTACT</div>
-              <div className="text-white/80">contact@futurebullet.com</div>
+              <a href="mailto:futurebullet@futurebullet.kr" className="text-white/80 hover:text-white transition">
+                futurebullet@futurebullet.kr
+              </a>
             </div>
             <div>
               <div className="text-white/40 text-xs tracking-[0.3em] mb-3">FOLLOW</div>
@@ -27,7 +29,18 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-white/5 pt-6 text-xs text-white/40">
-          <div>© {new Date().getFullYear()} FUTURE BULLET. All rights reserved.</div>
+          <div className="flex flex-wrap items-center gap-4">
+            <span>© {new Date().getFullYear()} FUTURE BULLET. All rights reserved.</span>
+            <span className="text-white/20">|</span>
+            <a
+              href="https://mustk.co.kr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tracking-[0.2em] text-white/60 hover:text-white transition"
+            >
+              인재채용
+            </a>
+          </div>
           <div className="tracking-[0.3em]">CREATING NEW OPPORTUNITIES</div>
         </div>
       </div>
