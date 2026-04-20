@@ -62,28 +62,32 @@ export default function Vision() {
           ))}
         </div>
 
-        {/* Company images */}
-        <div className="mt-20 grid grid-cols-1 gap-5 md:grid-cols-2">
-          <Reveal>
-            <div className="overflow-hidden rounded-3xl border border-white/5">
+      </div>
+
+      {/* Company images - horizontal scroll */}
+      <div className="relative mt-20">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#05070d] to-transparent md:w-24" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#05070d] to-transparent md:w-24" />
+
+        <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-6 pb-6 md:gap-6 md:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {[
+            { src: "/images/office-1.png", alt: "Future Bullet Office" },
+            { src: "/images/office-2.png", alt: "Future Bullet Conference Room" },
+            { src: "/images/conference.png", alt: "Future Bullet Workspace" },
+            { src: "/images/office-1.png", alt: "Future Bullet Office View" },
+          ].map((img, i) => (
+            <div
+              key={i}
+              className="relative aspect-[16/10] w-[82vw] shrink-0 snap-start overflow-hidden rounded-3xl border border-white/5 md:w-[60vw] lg:w-[48vw]"
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/office.jpg"
-                alt="Future Bullet Office"
-                className="h-full w-full object-cover aspect-[4/3]"
+                src={img.src}
+                alt={img.alt}
+                className="h-full w-full object-cover"
               />
             </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <div className="overflow-hidden rounded-3xl border border-white/5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/conference.png"
-                alt="Future Bullet Conference Room"
-                className="h-full w-full object-cover aspect-[4/3]"
-              />
-            </div>
-          </Reveal>
+          ))}
         </div>
       </div>
     </section>
