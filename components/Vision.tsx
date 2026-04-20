@@ -69,7 +69,7 @@ export default function Vision() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/office.jpg"
-                alt="Futurblit Office"
+                alt="Future Bullet Office"
                 className="h-full w-full object-cover aspect-[4/3]"
               />
             </div>
@@ -79,7 +79,7 @@ export default function Vision() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/conference.png"
-                alt="Futurblit Conference Room"
+                alt="Future Bullet Conference Room"
                 className="h-full w-full object-cover aspect-[4/3]"
               />
             </div>

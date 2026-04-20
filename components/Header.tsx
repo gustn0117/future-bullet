@@ -23,7 +23,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-10 h-16 md:h-20">
         <a href="#hero" className="flex items-center gap-2">
           <span className="text-xl md:text-2xl font-bold tracking-[0.2em]">
-            FUTURBLIT
+            FUTURE BULLET
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-10 text-sm text-white/70">
