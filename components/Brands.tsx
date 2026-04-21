@@ -98,21 +98,21 @@ export default function Brands() {
                 src={b.product}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover opacity-35 transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/85" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/25 to-black/80" />
 
               <div className="relative flex flex-1 items-center justify-center p-10 transition-transform duration-700 group-hover:scale-105">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`${b.logo}?v=2`}
                   alt={b.name}
-                  className="max-h-24 w-auto max-w-[70%] object-contain brightness-0 invert drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)] md:max-h-28"
+                  className="max-h-24 w-auto max-w-[70%] object-contain opacity-80 brightness-0 invert drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)] md:max-h-28"
                 />
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 via-black/70 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 via-black/75 to-transparent" />
 
               <div className="relative z-10 mt-auto w-full p-6 md:p-7">
                 <div className="text-[10px] tracking-[0.3em] text-white/60">{b.korean}</div>
