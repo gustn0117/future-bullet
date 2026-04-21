@@ -7,6 +7,7 @@ const brands = [
     tagline: "Professional Home Aesthetic Brand",
     description: "홈에스테틱 스킨케어 브랜드 에스테리브",
     logo: "/brands/esthelive-logo.png",
+    product: "/brands/esthelive-product.png",
     href: "#",
     accent: "from-[#3a2a5c] to-[#111018]",
   },
@@ -16,6 +17,7 @@ const brands = [
     tagline: "Advanced Science for Scalp Balance",
     description: "과학으로 검증된 온더셀 헤어케어 솔루션",
     logo: "/brands/onthecell-logo.png",
+    product: "/brands/onthecell-product.png",
     href: "#",
     accent: "from-[#1f2a3d] to-[#0b0f18]",
   },
@@ -25,6 +27,7 @@ const brands = [
     tagline: "Designing Your 8 Hours of Sleep",
     description: "당신의 잠든 8시간을 설계합니다",
     logo: "/brands/8hlab-logo.png",
+    product: "/brands/8hlab-product.png",
     href: "#",
     accent: "from-[#1b2a4a] to-[#0a101c]",
   },
@@ -34,6 +37,7 @@ const brands = [
     tagline: "Setting a New Standard for Your Body",
     description: "과학이 만든 똑똑한 바디 루틴",
     logo: "/brands/slenix-logo.png",
+    product: "/brands/slenix-product.png",
     href: "#",
     accent: "from-[#123a3b] to-[#0a1418]",
   },
@@ -56,6 +60,26 @@ export default function Brands() {
             </h2>
           </div>
         </Reveal>
+
+        <Reveal delay={150}>
+          <div className="mx-auto mt-12 max-w-5xl md:mt-16">
+            <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-black/40 shadow-[0_30px_80px_-20px_rgba(122,164,255,0.25)]">
+              <video
+                className="block h-full w-full object-cover"
+                src="/videos/brand-intro.mp4"
+                poster="/videos/brand-intro-poster.jpg"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label="Future Bullet 브랜드 소개 영상"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/5" />
+            </div>
+          </div>
+        </Reveal>
       </div>
 
       <div className="relative mt-16 md:mt-20">
@@ -69,16 +93,26 @@ export default function Brands() {
               href={b.href}
               className={`group relative flex aspect-[3/4] w-[72vw] shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-br ${b.accent} sm:w-[48vw] md:w-[32vw] lg:w-[24vw]`}
             >
-              <div className="flex flex-1 items-center justify-center p-10 transition-transform duration-700 group-hover:scale-105">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={b.product}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full object-cover opacity-35 transition-transform duration-700 group-hover:scale-110"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/85" />
+
+              <div className="relative flex flex-1 items-center justify-center p-10 transition-transform duration-700 group-hover:scale-105">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`${b.logo}?v=2`}
                   alt={b.name}
-                  className="max-h-24 w-auto max-w-[70%] object-contain brightness-0 invert md:max-h-28"
+                  className="max-h-24 w-auto max-w-[70%] object-contain brightness-0 invert drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)] md:max-h-28"
                 />
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/95 via-black/70 to-transparent" />
 
               <div className="relative z-10 mt-auto w-full p-6 md:p-7">
                 <div className="text-[10px] tracking-[0.3em] text-white/60">{b.korean}</div>
@@ -87,7 +121,7 @@ export default function Brands() {
                 <p className="mt-3 text-xs text-white/70 md:text-sm">{b.description}</p>
               </div>
 
-              <div className="absolute top-5 right-5 text-[10px] tracking-[0.3em] text-white/30">
+              <div className="absolute top-5 right-5 z-10 text-[10px] tracking-[0.3em] text-white/40">
                 0{i + 1} / 0{brands.length}
               </div>
             </a>

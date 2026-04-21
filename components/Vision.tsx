@@ -73,6 +73,8 @@ export default function Vision() {
           {[
             { src: "/images/office-1.png", alt: "Future Bullet Office" },
             { src: "/images/office-2.png", alt: "Future Bullet Conference Room" },
+            { src: "/images/office-3.png", alt: "Future Bullet Workspace" },
+            { src: "/images/office-4.png", alt: "Future Bullet Meeting Room" },
           ].map((img, i) => (
             <div
               key={i}
