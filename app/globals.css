@@ -35,14 +35,18 @@ body {
   background: rgba(79, 139, 255, 0.35);
 }
 
-/* reveal on scroll */
+/* reveal on scroll — only animates when JS is enabled (no-js class removed by inline script) */
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+html:not(.no-js) .reveal {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease, transform 1s ease;
   will-change: opacity, transform;
 }
-.reveal.in-view {
+html:not(.no-js) .reveal.in-view {
   opacity: 1;
   transform: translateY(0);
 }

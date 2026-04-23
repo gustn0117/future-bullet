@@ -20,9 +20,9 @@ export default function Footer() {
             </div>
             <div>
               <div className="text-white/40 text-xs tracking-[0.3em] mb-3">FOLLOW</div>
-              <div className="flex gap-4 text-white/80">
-                <a href="#" className="hover:text-white transition">Instagram</a>
-                <a href="#" className="hover:text-white transition">YouTube</a>
+              <div className="flex gap-4 text-white/40">
+                <span aria-disabled="true">Instagram</span>
+                <span aria-disabled="true">YouTube</span>
               </div>
             </div>
           </div>

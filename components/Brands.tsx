@@ -8,7 +8,6 @@ const brands = [
     description: "홈에스테틱 스킨케어 브랜드 에스테리브",
     logo: "/brands/esthelive-logo.png",
     product: "/brands/esthelive-product.png",
-    href: "#",
     accent: "from-[#3a2a5c] to-[#111018]",
   },
   {
@@ -18,7 +17,6 @@ const brands = [
     description: "과학으로 검증된 온더셀 헤어케어 솔루션",
     logo: "/brands/onthecell-logo.png",
     product: "/brands/onthecell-product.png",
-    href: "#",
     accent: "from-[#1f2a3d] to-[#0b0f18]",
   },
   {
@@ -28,7 +26,6 @@ const brands = [
     description: "당신의 잠든 8시간을 설계합니다",
     logo: "/brands/8hlab-logo.png",
     product: "/brands/8hlab-product.png",
-    href: "#",
     accent: "from-[#1b2a4a] to-[#0a101c]",
   },
   {
@@ -38,7 +35,6 @@ const brands = [
     description: "과학이 만든 똑똑한 바디 루틴",
     logo: "/brands/slenix-logo.png",
     product: "/brands/slenix-product.png",
-    href: "#",
     accent: "from-[#123a3b] to-[#0a1418]",
   },
 ];
@@ -88,9 +84,9 @@ export default function Brands() {
 
         <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-6 pb-6 md:gap-6 md:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {brands.map((b, i) => (
-            <a
+            <article
               key={b.name}
-              href={b.href}
+              aria-label={`${b.korean} ${b.name} - ${b.tagline}`}
               className={`group relative flex aspect-[3/4] w-[72vw] shrink-0 snap-start flex-col overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-br ${b.accent} sm:w-[48vw] md:w-[32vw] lg:w-[24vw]`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -124,7 +120,7 @@ export default function Brands() {
               <div className="absolute top-5 right-5 z-10 text-[10px] tracking-[0.3em] text-white/40">
                 0{i + 1} / 0{brands.length}
               </div>
-            </a>
+            </article>
           ))}
         </div>
       </div>

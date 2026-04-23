@@ -1,31 +1,33 @@
 import type { MetadataRoute } from "next";
 
 const siteUrl = "https://futurebullet.kr";
+// Fixed at build time so `lastmod` stays stable between crawls.
+// Bump this when significant content changes ship.
+const LAST_MODIFIED = new Date("2026-04-23");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   return [
     {
       url: `${siteUrl}/`,
-      lastModified: now,
+      lastModified: LAST_MODIFIED,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${siteUrl}/#brands`,
-      lastModified: now,
+      lastModified: LAST_MODIFIED,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${siteUrl}/#vision`,
-      lastModified: now,
+      lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${siteUrl}/#careers`,
-      lastModified: now,
+      lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.7,
     },
