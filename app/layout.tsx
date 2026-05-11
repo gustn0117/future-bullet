@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://futurebullet.kr";
+const siteUrl = "https://futurebullet.co.kr";
 const siteName = "퓨처블릿 FUTURE BULLET";
 const siteDescription =
   "퓨처블릿(futurebullet) | 뷰티·헬스 K-브랜드 런칭 전문, 기획부터 퍼포먼스 마케팅까지 설계하는 컴퍼니";

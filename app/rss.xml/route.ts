@@ -1,4 +1,4 @@
-const siteUrl = "https://futurebullet.kr";
+const siteUrl = "https://futurebullet.co.kr";
 const siteName = "퓨처블릿 FUTURE BULLET";
 const siteDescription =
   "퓨처블릿(futurebullet)은 숫자로 증명하고 감각으로 압도하는 브랜드 컴퍼니입니다. ESTHE'LIVE·ON THE CELL·8H LAB·SLENIX 등 K-브랜드의 성공 공식을 현실로 구현합니다.";

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://futurebullet.kr";
+const siteUrl = "https://futurebullet.co.kr";
 // Fixed at build time so `lastmod` stays stable between crawls.
 // Bump this when significant content changes ship.
 const LAST_MODIFIED = new Date("2026-04-23");
